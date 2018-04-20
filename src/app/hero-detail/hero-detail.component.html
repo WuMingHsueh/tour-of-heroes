@@ -1,0 +1,14 @@
+<div *ngIf="originSelectHero">
+    <h2>{{ selectHero.name | uppercase }} Details</h2>
+    <div>
+      <span>id: </span>{{ selectHero.id }}</div>
+    <div>
+      <span>name: </span>{{ selectHero.name }}</div>
+    <div>
+      <label>name:
+        <input type="text" placeholder="name" [(ngModel)]="selectHero.name"
+        (keyup.enter)="doModify()"
+        (keyup.escape)="doCancel()">
+      </label>
+    </div>
+</div>
